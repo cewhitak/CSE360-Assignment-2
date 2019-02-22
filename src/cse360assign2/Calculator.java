@@ -17,7 +17,7 @@ package cse360assign2;
 
 public class Calculator {
 	private int total;
-	
+	private String history="0";
 	/**
 	 * Calculator is the constructor that sets the calculator to zero
 	 * @author Courtney2
@@ -25,7 +25,7 @@ public class Calculator {
 	 */
 	
 	public Calculator () {
-		total = 0;  
+		total = 0;   
 		
 	}
 	
@@ -48,7 +48,7 @@ public class Calculator {
 	
 	public void add (int value) {
 		total= total + value;
-		
+		history= history + " + " + value;
 	}
 	
 	/**
@@ -59,7 +59,7 @@ public class Calculator {
 	
 	public void subtract (int value) {
 		total= total - value;
-		
+		history= history + " - " + value;
 	}
 	
 	/**
@@ -70,7 +70,7 @@ public class Calculator {
 	
 	public void multiply (int value) {
 		total= total * value;
-		
+		history= history + " * " + value;
 		
 	}
 	
@@ -91,17 +91,17 @@ public class Calculator {
 		{
 			total= total / value;
 		}
-		
+		history= history + " / " + value;
 	}
 	
 	/**
-	 * getHistory method returns an empty string
+	 * getHistory method returns a string of all the calculations that took place
 	 * @author Courtney2
 	 *
 	 */
 	
 	public String getHistory () {
-		return "";
+		return history;
 	}
 	
 
